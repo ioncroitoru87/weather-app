@@ -31,7 +31,7 @@ const WeatherFunction = () => {
         })
         .catch((err) => {
           //If user denied location service then standard location weather will le shown on basis of latitude & latitude.
-          getWeather(28.67, 77.22);
+          getWeather(48.85, 2.29);
           alert(
             "You have disabled location service. Allow 'This APP' to access your location. Your current location will be used for calculating Real time weather."
           );
