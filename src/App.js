@@ -32,7 +32,7 @@ const App = () => {
               </RequireAuth>
             }
           ></Route>
-          <Route path="/:userId" element={<WeatherDetails />} />
+          <Route path="/:cityId" element={<WeatherDetails />} />
 
           <Route path="login" element={<Login />} />
         </Routes>

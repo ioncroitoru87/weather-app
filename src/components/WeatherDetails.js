@@ -12,20 +12,20 @@ const StyledContainer = styled.div`
 `;
 
 const WeatherDetails = () => {
-  const { userId } = useParams();
+  const { cityId } = useParams();
   const [city, setCity] = useState("");
 
   useEffect(() => {
     const fetchCity = async () => {
       const data = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${userId}&units=metric&appid=${key}`
+        `https://api.openweathermap.org/data/2.5/weather?q=${cityId}&units=metric&appid=${key}`
       );
       const result = await data.data;
       setCity(result);
       console.log(result);
     };
     fetchCity();
-  }, [userId]);
+  }, [cityId]);
   const { main, weather, sys } = city;
   console.log(main);
   if (city.length === 0) {
@@ -35,7 +35,7 @@ const WeatherDetails = () => {
     <>
       <StyledContainer>
         <h2>
-          {userId}, {sys.country}
+          {cityId}, {sys.country}
         </h2>
         <p>
           <img

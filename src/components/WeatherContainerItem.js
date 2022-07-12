@@ -8,6 +8,7 @@ const StyledButtonCity = styled.button`
 `;
 const WeatherContainerItem = ({ item }) => {
   const navigate = useNavigate();
+
   const handleClick = () => {
     navigate(`/${item.name}`);
   };
